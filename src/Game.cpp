@@ -46,8 +46,8 @@ char Game::input() {
                 if (Event.key.code == sf::Keyboard::D) {
                     return 'd';
                 }
-                if (Event.key.code == sf::Keyboard::E) {
-                    return 'e';
+                if (Event.key.code == sf::Keyboard::Q) {
+                    return 'Q';
                 }
             }
         }
@@ -94,8 +94,9 @@ void Game::action(const char &button_) {
                 //player->showEquipment();
                 break;
             }
-            case '0': {
+            case 'q': {
                 game_over = true;
+                break;
             }
             default:
                 break;

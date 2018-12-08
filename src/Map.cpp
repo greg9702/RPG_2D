@@ -2,7 +2,7 @@
 
 Map::Map(std::vector<Object*> &objects_) {
     std::string line;
-    std::ifstream myfile ("map_template20x40.txt"); // TODO move this to game_files folder
+    std::ifstream myfile ("map_template.txt"); // TODO move this to game_files folder
     int j = 0;
     if (myfile.is_open())
     {
@@ -54,9 +54,3 @@ char Map::checkField(const int &x_, const int &y_) {
 Map::~Map() {
     std::cout << "Map destructor called" << std::endl;
 }
-
-void Map::drawMap() {
-
-}
-
-//need to change to overloading operator <<

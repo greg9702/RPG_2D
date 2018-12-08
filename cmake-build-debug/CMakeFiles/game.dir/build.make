@@ -43,10 +43,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2
+CMAKE_SOURCE_DIR = /home/greg9702/Documents/Programowanie/C++/RPG_2D
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/game.dir/depend.make
@@ -57,135 +57,135 @@ include CMakeFiles/game.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/game.dir/flags.make
 
-CMakeFiles/game.dir/src/main.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/main.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/main.cpp
-
-CMakeFiles/game.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/main.cpp > CMakeFiles/game.dir/src/main.cpp.i
-
-CMakeFiles/game.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/main.cpp -o CMakeFiles/game.dir/src/main.cpp.s
-
-CMakeFiles/game.dir/src/Game.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/Game.cpp.o: ../src/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/game.dir/src/Game.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Game.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game.cpp
-
-CMakeFiles/game.dir/src/Game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game.cpp > CMakeFiles/game.dir/src/Game.cpp.i
-
-CMakeFiles/game.dir/src/Game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game.cpp -o CMakeFiles/game.dir/src/Game.cpp.s
-
-CMakeFiles/game.dir/src/Map.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/Map.cpp.o: ../src/Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game.dir/src/Map.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Map.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Map.cpp
-
-CMakeFiles/game.dir/src/Map.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Map.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Map.cpp > CMakeFiles/game.dir/src/Map.cpp.i
-
-CMakeFiles/game.dir/src/Map.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Map.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Map.cpp -o CMakeFiles/game.dir/src/Map.cpp.s
-
-CMakeFiles/game.dir/src/Player.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/Player.cpp.o: ../src/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/src/Player.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Player.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Player.cpp
-
-CMakeFiles/game.dir/src/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Player.cpp > CMakeFiles/game.dir/src/Player.cpp.i
-
-CMakeFiles/game.dir/src/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Player.cpp -o CMakeFiles/game.dir/src/Player.cpp.s
-
-CMakeFiles/game.dir/src/Object.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/Object.cpp.o: ../src/Object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game.dir/src/Object.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Object.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Object.cpp
-
-CMakeFiles/game.dir/src/Object.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Object.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Object.cpp > CMakeFiles/game.dir/src/Object.cpp.i
-
-CMakeFiles/game.dir/src/Object.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Object.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Object.cpp -o CMakeFiles/game.dir/src/Object.cpp.s
-
-CMakeFiles/game.dir/src/Enemy.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/Enemy.cpp.o: ../src/Enemy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game.dir/src/Enemy.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Enemy.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Enemy.cpp
-
-CMakeFiles/game.dir/src/Enemy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Enemy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Enemy.cpp > CMakeFiles/game.dir/src/Enemy.cpp.i
-
-CMakeFiles/game.dir/src/Enemy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Enemy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Enemy.cpp -o CMakeFiles/game.dir/src/Enemy.cpp.s
-
 CMakeFiles/game.dir/src/Character.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/Character.cpp.o: ../src/Character.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game.dir/src/Character.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Character.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Character.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game.dir/src/Character.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Character.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Character.cpp
 
 CMakeFiles/game.dir/src/Character.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Character.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Character.cpp > CMakeFiles/game.dir/src/Character.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Character.cpp > CMakeFiles/game.dir/src/Character.cpp.i
 
 CMakeFiles/game.dir/src/Character.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Character.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Character.cpp -o CMakeFiles/game.dir/src/Character.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Character.cpp -o CMakeFiles/game.dir/src/Character.cpp.s
+
+CMakeFiles/game.dir/src/Enemy.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/Enemy.cpp.o: ../src/Enemy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/game.dir/src/Enemy.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Enemy.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Enemy.cpp
+
+CMakeFiles/game.dir/src/Enemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Enemy.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Enemy.cpp > CMakeFiles/game.dir/src/Enemy.cpp.i
+
+CMakeFiles/game.dir/src/Enemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Enemy.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Enemy.cpp -o CMakeFiles/game.dir/src/Enemy.cpp.s
+
+CMakeFiles/game.dir/src/Game.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/Game.cpp.o: ../src/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game.dir/src/Game.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Game.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game.cpp
+
+CMakeFiles/game.dir/src/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game.cpp > CMakeFiles/game.dir/src/Game.cpp.i
+
+CMakeFiles/game.dir/src/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game.cpp -o CMakeFiles/game.dir/src/Game.cpp.s
 
 CMakeFiles/game.dir/src/Game_Window.cpp.o: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/Game_Window.cpp.o: ../src/Game_Window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/game.dir/src/Game_Window.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Game_Window.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game_Window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/src/Game_Window.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Game_Window.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game_Window.cpp
 
 CMakeFiles/game.dir/src/Game_Window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Game_Window.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game_Window.cpp > CMakeFiles/game.dir/src/Game_Window.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game_Window.cpp > CMakeFiles/game.dir/src/Game_Window.cpp.i
 
 CMakeFiles/game.dir/src/Game_Window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Game_Window.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game_Window.cpp -o CMakeFiles/game.dir/src/Game_Window.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game_Window.cpp -o CMakeFiles/game.dir/src/Game_Window.cpp.s
+
+CMakeFiles/game.dir/src/Map.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/Map.cpp.o: ../src/Map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game.dir/src/Map.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Map.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Map.cpp
+
+CMakeFiles/game.dir/src/Map.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Map.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Map.cpp > CMakeFiles/game.dir/src/Map.cpp.i
+
+CMakeFiles/game.dir/src/Map.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Map.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Map.cpp -o CMakeFiles/game.dir/src/Map.cpp.s
+
+CMakeFiles/game.dir/src/Object.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/Object.cpp.o: ../src/Object.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game.dir/src/Object.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Object.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Object.cpp
+
+CMakeFiles/game.dir/src/Object.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Object.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Object.cpp > CMakeFiles/game.dir/src/Object.cpp.i
+
+CMakeFiles/game.dir/src/Object.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Object.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Object.cpp -o CMakeFiles/game.dir/src/Object.cpp.s
+
+CMakeFiles/game.dir/src/Player.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/Player.cpp.o: ../src/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game.dir/src/Player.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/Player.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Player.cpp
+
+CMakeFiles/game.dir/src/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Player.cpp > CMakeFiles/game.dir/src/Player.cpp.i
+
+CMakeFiles/game.dir/src/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Player.cpp -o CMakeFiles/game.dir/src/Player.cpp.s
+
+CMakeFiles/game.dir/src/main.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/game.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/main.cpp.o -c /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/main.cpp
+
+CMakeFiles/game.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/main.cpp > CMakeFiles/game.dir/src/main.cpp.i
+
+CMakeFiles/game.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/main.cpp -o CMakeFiles/game.dir/src/main.cpp.s
 
 # Object files for target game
 game_OBJECTS = \
-"CMakeFiles/game.dir/src/main.cpp.o" \
-"CMakeFiles/game.dir/src/Game.cpp.o" \
-"CMakeFiles/game.dir/src/Map.cpp.o" \
-"CMakeFiles/game.dir/src/Player.cpp.o" \
-"CMakeFiles/game.dir/src/Object.cpp.o" \
-"CMakeFiles/game.dir/src/Enemy.cpp.o" \
 "CMakeFiles/game.dir/src/Character.cpp.o" \
-"CMakeFiles/game.dir/src/Game_Window.cpp.o"
+"CMakeFiles/game.dir/src/Enemy.cpp.o" \
+"CMakeFiles/game.dir/src/Game.cpp.o" \
+"CMakeFiles/game.dir/src/Game_Window.cpp.o" \
+"CMakeFiles/game.dir/src/Map.cpp.o" \
+"CMakeFiles/game.dir/src/Object.cpp.o" \
+"CMakeFiles/game.dir/src/Player.cpp.o" \
+"CMakeFiles/game.dir/src/main.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
 
-game: CMakeFiles/game.dir/src/main.cpp.o
-game: CMakeFiles/game.dir/src/Game.cpp.o
-game: CMakeFiles/game.dir/src/Map.cpp.o
-game: CMakeFiles/game.dir/src/Player.cpp.o
-game: CMakeFiles/game.dir/src/Object.cpp.o
-game: CMakeFiles/game.dir/src/Enemy.cpp.o
 game: CMakeFiles/game.dir/src/Character.cpp.o
+game: CMakeFiles/game.dir/src/Enemy.cpp.o
+game: CMakeFiles/game.dir/src/Game.cpp.o
 game: CMakeFiles/game.dir/src/Game_Window.cpp.o
+game: CMakeFiles/game.dir/src/Map.cpp.o
+game: CMakeFiles/game.dir/src/Object.cpp.o
+game: CMakeFiles/game.dir/src/Player.cpp.o
+game: CMakeFiles/game.dir/src/main.cpp.o
 game: CMakeFiles/game.dir/build.make
 game: CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -198,6 +198,6 @@ CMakeFiles/game.dir/clean:
 .PHONY : CMakeFiles/game.dir/clean
 
 CMakeFiles/game.dir/depend:
-	cd /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2 /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2 /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles/game.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/greg9702/Documents/Programowanie/C++/RPG_2D /home/greg9702/Documents/Programowanie/C++/RPG_2D /home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug /home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug /home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles/game.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/game.dir/depend
 

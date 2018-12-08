@@ -42,3 +42,5 @@ int main() {
 }
 
 #endif
+
+//TODO change all return const& char to return enum

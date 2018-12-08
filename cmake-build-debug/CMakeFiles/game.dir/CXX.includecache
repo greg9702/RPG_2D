@@ -21,12 +21,6 @@ Character.h
 ../include/Game.h
 iostream
 -
-Map.h
-../include/Map.h
-Player.h
-../include/Player.h
-Enemy.h
-../include/Enemy.h
 vector
 -
 memory
@@ -37,6 +31,12 @@ algorithm
 -
 Game_Window.h
 ../include/Game_Window.h
+Map.h
+../include/Map.h
+Player.h
+../include/Player.h
+Enemy.h
+../include/Enemy.h
 
 ../include/Game_Window.h
 Map.h
@@ -71,8 +71,6 @@ SFML/Network.hpp
 -
 chrono
 -
-Game.h
-../include/Game.h
 
 ../include/Map.h
 iostream
@@ -108,39 +106,21 @@ Character.h
 algorithm
 -
 
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Character.cpp
-Character.h
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Character.h
-
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Enemy.cpp
-Enemy.h
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Enemy.h
-
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game.cpp
+/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game.cpp
 Game.h
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game.h
+/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game.h
 
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game_Window.cpp
+/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game_Window.cpp
 Game_Window.h
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game_Window.h
+/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game_Window.h
 
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Map.cpp
+/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Map.cpp
 Map.h
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Map.h
+/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Map.h
 
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Object.cpp
-string
--
-Object.h
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Object.h
-
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Player.cpp
-Player.h
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Player.h
-
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/main.cpp
+/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/main.cpp
 iostream
 -
 Game.h
-/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game.h
+/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game.h
 

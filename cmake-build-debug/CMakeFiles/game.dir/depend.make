@@ -20,7 +20,6 @@ CMakeFiles/game.dir/src/Game.cpp.o: ../src/Game.cpp
 
 CMakeFiles/game.dir/src/Game_Window.cpp.o: ../include/Character.h
 CMakeFiles/game.dir/src/Game_Window.cpp.o: ../include/Enemy.h
-CMakeFiles/game.dir/src/Game_Window.cpp.o: ../include/Game.h
 CMakeFiles/game.dir/src/Game_Window.cpp.o: ../include/Game_Window.h
 CMakeFiles/game.dir/src/Game_Window.cpp.o: ../include/Map.h
 CMakeFiles/game.dir/src/Game_Window.cpp.o: ../include/Object.h

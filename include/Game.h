@@ -5,14 +5,14 @@
 #define GAME_H
 
 #include <iostream>
-#include "Map.h"
-#include "Player.h"
-#include "Enemy.h"
 #include <vector>
 #include <memory>
 #include <utility>
 #include <algorithm>
 #include "Game_Window.h"
+#include "Map.h"
+#include "Player.h"
+#include "Enemy.h"
 
 class Game {
 private:
@@ -27,12 +27,12 @@ public:
     char input();                   // gets input
     void update(char& button);                  // update objects
     void action(const char& button_);
-    std::vector<Object*> objects;   // interface for all objects on map
+    Game_Window * game_window;
     Player* player;                 // TODO change to smart pointers
     Map* map;
     Enemy* enemy1;                  // TODO more enemies - need to create some kind of array or vector
     Enemy* enemy2;
-    Game_Window * game_window;
+    std::vector<Object*> objects;   // interface for all objects on map
     Object* retObjPointer(std::vector<Object*> &objects, const int& x_, const int& y_); // using static cast we can cast it to any type
     std::string getCurrentTimestamp();
 };

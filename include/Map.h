@@ -19,7 +19,6 @@ public:
     ~Map();
     void updateMap(std::vector<Object*> &objects_);
     char checkField(const int& x_, const int& y_);
-    void drawMap();
     void fillMap(std::vector<Object*> &objects_);
 };
 

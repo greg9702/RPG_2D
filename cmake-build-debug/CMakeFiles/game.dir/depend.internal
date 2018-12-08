@@ -3,12 +3,12 @@
 
 CMakeFiles/game.dir/src/Character.cpp.o
  ../include/Character.h
- /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Character.cpp
+ /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Character.cpp
 CMakeFiles/game.dir/src/Enemy.cpp.o
  ../include/Character.h
  ../include/Enemy.h
  ../include/Object.h
- /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Enemy.cpp
+ /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Enemy.cpp
 CMakeFiles/game.dir/src/Game.cpp.o
  ../include/Character.h
  ../include/Enemy.h
@@ -17,31 +17,30 @@ CMakeFiles/game.dir/src/Game.cpp.o
  ../include/Map.h
  ../include/Object.h
  ../include/Player.h
- /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game.cpp
+ /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game.cpp
 CMakeFiles/game.dir/src/Game_Window.cpp.o
  ../include/Character.h
  ../include/Enemy.h
- ../include/Game.h
  ../include/Game_Window.h
  ../include/Map.h
  ../include/Object.h
  ../include/Player.h
- /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game_Window.cpp
+ /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game_Window.cpp
 CMakeFiles/game.dir/src/Map.cpp.o
  ../include/Character.h
  ../include/Enemy.h
  ../include/Map.h
  ../include/Object.h
  ../include/Player.h
- /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Map.cpp
+ /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Map.cpp
 CMakeFiles/game.dir/src/Object.cpp.o
  ../include/Object.h
- /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Object.cpp
+ /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Object.cpp
 CMakeFiles/game.dir/src/Player.cpp.o
  ../include/Character.h
  ../include/Object.h
  ../include/Player.h
- /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Player.cpp
+ /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Player.cpp
 CMakeFiles/game.dir/src/main.cpp.o
  ../include/Character.h
  ../include/Enemy.h
@@ -50,4 +49,4 @@ CMakeFiles/game.dir/src/main.cpp.o
  ../include/Map.h
  ../include/Object.h
  ../include/Player.h
- /home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/main.cpp
+ /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/main.cpp

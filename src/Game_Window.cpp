@@ -64,7 +64,8 @@ Game_Window::~Game_Window() {
 }
 
 Game_Window::Game_Window() {
-    Windowx.create(sf::VideoMode(800,640), "RPG");
+    Windowx.create(sf::VideoMode(760,560), "RPG");
+    Windowx.clear();
     Windowx.setKeyRepeatEnabled(false);
     Windowx.setPosition(sf::Vector2i(50, 50));
     Windowx.setFramerateLimit(60);                  // set FPS

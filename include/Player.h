@@ -22,8 +22,6 @@ public:
     void getLoot(const std::vector<int>& loot_);
     void updatePlayer();
     void takeDamage(const int& atack_);
-    //std::vector<Item*> Equipment;  // first element equiped wpn, secound eq armour, all others are bag1z
-    //void showEquipment();
 };
 
 

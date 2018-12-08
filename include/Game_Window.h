@@ -21,7 +21,6 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 #include <chrono>
-#include "Game.h"
 
 class Game_Window {
 public:
@@ -31,4 +30,4 @@ public:
     sf::RenderWindow Windowx;
 };
 
-#endif //RPG_WINDOW_H
+#endif

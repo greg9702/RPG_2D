@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Character.cpp" "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles/game.dir/src/Character.cpp.o"
-  "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Enemy.cpp" "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles/game.dir/src/Enemy.cpp.o"
-  "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game.cpp" "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles/game.dir/src/Game.cpp.o"
-  "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Game_Window.cpp" "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles/game.dir/src/Game_Window.cpp.o"
-  "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Map.cpp" "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles/game.dir/src/Map.cpp.o"
-  "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Object.cpp" "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles/game.dir/src/Object.cpp.o"
-  "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/Player.cpp" "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles/game.dir/src/Player.cpp.o"
-  "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/src/main.cpp" "/home/greg9702/Documents/Programowanie/C++/RPGSFMLv2/cmake-build-debug/CMakeFiles/game.dir/src/main.cpp.o"
+  "/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Character.cpp" "/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles/game.dir/src/Character.cpp.o"
+  "/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Enemy.cpp" "/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles/game.dir/src/Enemy.cpp.o"
+  "/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game.cpp" "/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles/game.dir/src/Game.cpp.o"
+  "/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game_Window.cpp" "/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles/game.dir/src/Game_Window.cpp.o"
+  "/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Map.cpp" "/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles/game.dir/src/Map.cpp.o"
+  "/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Object.cpp" "/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles/game.dir/src/Object.cpp.o"
+  "/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Player.cpp" "/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles/game.dir/src/Player.cpp.o"
+  "/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/main.cpp" "/home/greg9702/Documents/Programowanie/C++/RPG_2D/cmake-build-debug/CMakeFiles/game.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
