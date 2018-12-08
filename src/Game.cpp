@@ -1,15 +1,16 @@
 #include "Game.h"
 
 Game::Game()
-        : game_over(false) {
+        : game_over(false){
     player = new Player(1,1,'p', 1, 100, 25, 10, 0, 0);
     objects.push_back(player);
-    enemy1 = new Enemy(5,5,'e', 1, 50, 20, 5, 5, 10);
+    enemy1 = new Enemy(5,5,'e', 1, 55, 20, 5, 5, 10);
     objects.push_back(enemy1);
-    enemy2 = new Enemy(3,3,'e',1, 50, 20, 5, 5, 10);
+    enemy2 = new Enemy(3,3,'e',1, 54, 20, 5, 5, 10);
     objects.push_back(enemy2);
     map = new Map(objects);
     game_window = new Game_Window();
+    game_stage = MAP_VIEW;
     Game::start();
 }
 
@@ -18,12 +19,15 @@ void Game::start() {
     while (!game_over) {
         Game::draw();
         button = Game::input();
+        //std::cout << button << std::endl;
+        //std::cout << game_stage << std::endl;
         Game::update(button);
     }
 }
 
 void Game::draw() {
-    game_window->drawMap(map, player);
+    if(game_stage == MAP_VIEW) game_window->drawMap(map, player);
+    if(game_stage == FIGHT_VIEW) game_window->drawMap(player, enemy);
 }
 
 char Game::input() {
@@ -50,27 +54,17 @@ char Game::input() {
                 }
             }
         }
-   return '-';
+   return '-';          // default
 }
 
 void Game::update(char& button) {
-
-    try {
         Game::action(button);
         player->Player::updatePlayer(); // TODO no need to put this here
         map->Map::updateMap(objects);
-    } catch (int exception) {
-        if (exception == -1) {
-            game_over = true;      //player is dead
-        }
-        if (exception == -2) {
-            game_over = true;
-        }
-    }
 }
 
 void Game::action(const char &button_) {
-    if (button_ == 'a' || button_ == 'w' || button_ == 's' || button_ == 'd' || button_ == 'q' || button == 'e') {
+    if (game_stage == MAP_VIEW){
         int newx = player->retPosx();
         int newy = player->retPosy();
         switch (button) {
@@ -89,22 +83,28 @@ void Game::action(const char &button_) {
             case 's': {
                 newy++;
                 break;
-            } case 'e': {
+            }
+            case 'e': {
                 //player->showEquipment();
                 break;
             }
-            case 'q': {
+            case '0': {
                 game_over = true;
                 break;
             }
             default:
                 break;
         }
-        std::cout << map->Map::checkField(newx, newy);
+        if (map->Map::checkField(newx, newy) == 'e') {
+            enemy = dynamic_cast<Enemy *>(retObjPointer(objects, newx, newy));
+//            Fight* fight = new Fight(player,enemy);
+            game_stage = FIGHT_VIEW;
+        }
+        //std::cout << map->Map::checkField(newx, newy);
         if (map->Map::checkField(newx, newy) == 'f') {
             player->Player::movePlayer(button);
         }
-//        else if (map->Map::checkField(newx, newy) == 'e') {
+
 //            Enemy *enemy = dynamic_cast<Enemy *>(retObjPointer(objects, newx, newy));  //TODO mem leak there // do i need this cast?
             //std::unique_ptr<Fight> ptr(new Fight(player,enemy));
 //            Fight *fight = new Fight(player, enemy);                            //TODO smart ptr
@@ -113,6 +113,17 @@ void Game::action(const char &button_) {
 //                delete enemy;
 //                objects.erase(std::remove(objects.begin(), objects.end(), enemy), objects.end());
 //            }
+//        }
+    }
+
+    if (game_stage == FIGHT_VIEW) {
+        std::cout << "FIGHT" << std::endl;
+//        std::cout << "GS " << fight->retFight_status() << std::endl;
+//        if (fight->retFight_status()) {
+//
+//        } else {
+//            delete fight;
+//            delete enemy;
 //        }
     }
 }

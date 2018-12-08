@@ -34,7 +34,6 @@ void Map::fillMap(std::vector<Object*> &objects_) {
         if (i->retType() == 'p') map [i->retPosy()][i->retPosx()] = 'p'; // draw player
         if (i->retType() == 'e') map [i->retPosy()][i->retPosx()] = 'e'; // draw enemies
     }
-    //std::cout << &this->map << std::endl;
 }
 
 void Map::updateMap(std::vector<Object*> &objects_) {
@@ -46,7 +45,7 @@ char Map::checkField(const int &x_, const int &y_) {
         return 'w';  // w means wall
     } else if (this->map[y_][x_] == ' ') {
         return 'f';  // f means free
-    } else if (this->map[y_][x_] == 'X') {
+    } else if (this->map[y_][x_] == 'e') {
         return 'e';  // e means free
     }
 }

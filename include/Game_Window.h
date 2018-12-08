@@ -27,6 +27,7 @@ public:
     Game_Window();
     ~Game_Window();
     void drawMap(Map* map_, Player* player_);
+    void drawMap(Player* player_, Enemy* enemy_);
     sf::RenderWindow Windowx;
 };
 

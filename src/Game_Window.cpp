@@ -3,6 +3,23 @@
 //
 #include "Game_Window.h"
 
+Game_Window::~Game_Window() {
+    std::cout << "Map destructor called!" << std::endl;
+}
+
+Game_Window::Game_Window() {
+    Windowx.create(sf::VideoMode(760,560), "RPG");
+    Windowx.clear();
+    Windowx.setKeyRepeatEnabled(false);
+    Windowx.setPosition(sf::Vector2i(50, 50));
+    Windowx.setFramerateLimit(60);                  // set FPS
+
+    //Window.setSize(sf::Vector2u(640, 480));
+    // run the program as long as the window is open
+    //Window.setSize(sf::Vector2u(640, 480));
+
+}
+
 void Game_Window::drawMap(Map* map_, Player* player_) {
     Windowx.clear();
 
@@ -76,19 +93,25 @@ void Game_Window::drawMap(Map* map_, Player* player_) {
     Windowx.display();
 }
 
-Game_Window::~Game_Window() {
-    std::cout << "Map destructor called!" << std::endl;
-}
-
-Game_Window::Game_Window() {
-    Windowx.create(sf::VideoMode(760,560), "RPG");
+void Game_Window::drawMap(Player *player_, Enemy *enemy_) {
     Windowx.clear();
-    Windowx.setKeyRepeatEnabled(false);
-    Windowx.setPosition(sf::Vector2i(50, 50));
-    Windowx.setFramerateLimit(60);                  // set FPS
 
-    //Window.setSize(sf::Vector2u(640, 480));
-    // run the program as long as the window is open
-    //Window.setSize(sf::Vector2u(640, 480));
+    sf::Font font;
+    if (!font.loadFromFile("Sansation_Regular.ttf"))
+    {
+        std::cout << "Error loading font\n" ;
+    }
 
+    sf::Text text;
+    text.setFont(font);
+    std::string stext;
+    stext = "PLAYER HP: " + std::to_string(player_->retHp()) + "\nENEMY HP: " + std::to_string(enemy_->retHp());
+    text.setString(stext);
+    text.setCharacterSize(48); // in pixels, not points!
+    //text.setStyle(sf::Text::Bold );
+    text.setPosition(0,0);
+
+
+    Windowx.draw(text);
+    Windowx.display();
 }
