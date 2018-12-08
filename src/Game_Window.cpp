@@ -4,6 +4,12 @@
 #include "Game_Window.h"
 
 char Game_Window::drawMap(Map* map_, Player* player_) {
+    sf::Text text;
+    //player_->showStats()
+    text.setString("ELO");
+    sf::Sprite player_stats;
+    text.setColor(sf::Color::Red);
+
     sf::Texture gTexture;
     sf::Sprite grassImage;
     if(!gTexture.loadFromFile("grass.png"))
@@ -56,6 +62,8 @@ char Game_Window::drawMap(Map* map_, Player* player_) {
         yposition += 40;
         xposition = 0;
     }
+    player_stats.setPosition(0, 0);
+    Windowx.draw(player_stats);
     Windowx.display();
 }
 

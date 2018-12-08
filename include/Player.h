@@ -18,7 +18,7 @@ public:
     char retType() override;
     int retAtk() override;
     void movePlayer(const char& button);
-    void showStats();
+    std::string showStats();
     void getLoot(const std::vector<int>& loot_);
     void updatePlayer();
     void takeDamage(const int& atack_);

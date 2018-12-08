@@ -114,10 +114,6 @@ Game.h
 Game_Window.h
 /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Game_Window.h
 
-/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Map.cpp
-Map.h
-/home/greg9702/Documents/Programowanie/C++/RPG_2D/src/Map.h
-
 /home/greg9702/Documents/Programowanie/C++/RPG_2D/src/main.cpp
 iostream
 -

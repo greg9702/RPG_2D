@@ -40,13 +40,14 @@ void Player::movePlayer(const char &button) {
     }
 }
 
-void Player::showStats() {
-    std::cout << "(" << this->retPosx() << "," << this->Player::retPosy() << ")" << std::endl
-              << "HP: " << this->m_hp << std::endl
-              << "ATACK: " << this->retAtk() << std::endl
-              << "LVL: " << this->m_level << std::endl
-              << "EXP: " << this->m_exp << std::endl
-              << "GOLD: " << this->m_gold << std::endl;
+std::string Player::showStats() {
+//    std::cout << "(" << this->Player::retPosx() << "," << this->Player::retPosy() << ")" << std::endl
+//              << "HP: " << this->m_hp << std::endl
+//              << "ATACK: " << this->retAtk() << std::endl
+//              << "LVL: " << this->m_level << std::endl
+//              << "EXP: " << this->m_exp << std::endl
+//              << "GOLD: " << this->m_gold << std::endl;
+    return ( "(" + std::to_string(this->Player::retPosx()) + "," + std::to_string(this->Player::retPosy()) + ")" );
 }
 
 
