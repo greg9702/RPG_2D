@@ -16,6 +16,7 @@ public:
     ~Fight();
     bool retFight_status();
     void startFight(Player* player_, Enemy* enemy_);
+    void setFight(const bool& number);
 };
 
 #endif //RPG_FIGHT_H

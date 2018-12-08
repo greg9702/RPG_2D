@@ -50,7 +50,7 @@ char Game::input() {
                     return 'd';
                 }
                 if (Event.key.code == sf::Keyboard::Q) {
-                    return 'Q';
+                    return 'q';
                 }
             }
         }
@@ -88,7 +88,7 @@ void Game::action(const char &button_) {
                 //player->showEquipment();
                 break;
             }
-            case '0': {
+            case 'q': {
                 game_over = true;
                 break;
             }
@@ -97,7 +97,7 @@ void Game::action(const char &button_) {
         }
         if (map->Map::checkField(newx, newy) == 'e') {
             enemy = dynamic_cast<Enemy *>(retObjPointer(objects, newx, newy));
-//            Fight* fight = new Fight(player,enemy);
+            fight = new Fight(player,enemy);
             game_stage = FIGHT_VIEW;
         }
         //std::cout << map->Map::checkField(newx, newy);
@@ -118,13 +118,23 @@ void Game::action(const char &button_) {
 
     if (game_stage == FIGHT_VIEW) {
         std::cout << "FIGHT" << std::endl;
-//        std::cout << "GS " << fight->retFight_status() << std::endl;
-//        if (fight->retFight_status()) {
-//
-//        } else {
-//            delete fight;
-//            delete enemy;
-//        }
+    switch (button) {
+        case 'q': {
+            fight->setFight(0);
+            break;
+        }
+        default:
+            break;
+    }
+    if (fight->retFight_status()) {
+        std::cout << "FIGHT LAST" << std::endl;
+    } else {
+
+        delete enemy;
+        objects.erase(std::remove(objects.begin(), objects.end(), enemy), objects.end());
+        delete fight;
+        game_stage = MAP_VIEW;
+    }
     }
 }
 
