@@ -26,7 +26,7 @@ class Game_Window {
 public:
     Game_Window();
     ~Game_Window();
-    char drawMap(Map* map_, Player* player_);
+    void drawMap(Map* map_, Player* player_);
     sf::RenderWindow Windowx;
 };
 

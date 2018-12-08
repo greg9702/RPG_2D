@@ -3,12 +3,24 @@
 //
 #include "Game_Window.h"
 
-char Game_Window::drawMap(Map* map_, Player* player_) {
+void Game_Window::drawMap(Map* map_, Player* player_) {
+    Windowx.clear();
+
+    sf::Font font;
+    if (!font.loadFromFile("Sansation_Regular.ttf"))
+        //find this file in the "pong" example in the SFML examples folder
+    {
+        std::cout << "Error loading font\n" ;
+    }
+
     sf::Text text;
-    //player_->showStats()
-    text.setString("ELO");
-    sf::Sprite player_stats;
-    text.setColor(sf::Color::Red);
+    text.setFont(font);
+    text.setString(player_->showStats());
+    text.setCharacterSize(20); // in pixels, not points!
+    //text.setStyle(sf::Text::Bold );
+    text.setPosition(40,400);
+
+// inside the main loop, between window.clear() and window.display()
 
     sf::Texture gTexture;
     sf::Sprite grassImage;
@@ -57,13 +69,10 @@ char Game_Window::drawMap(Map* map_, Player* player_) {
             }
             xposition += 40;
         }
-        //std::cout << xposition << ", " << yposition << std::endl;
-
         yposition += 40;
         xposition = 0;
     }
-    player_stats.setPosition(0, 0);
-    Windowx.draw(player_stats);
+    Windowx.draw(text);
     Windowx.display();
 }
 

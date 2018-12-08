@@ -23,8 +23,7 @@ void Game::start() {
 }
 
 void Game::draw() {
-    button = game_window->drawMap(map, player);
-    std::cout << button << std::endl;
+    game_window->drawMap(map, player);
 }
 
 char Game::input() {
@@ -103,7 +102,6 @@ void Game::action(const char &button_) {
         }
         std::cout << map->Map::checkField(newx, newy);
         if (map->Map::checkField(newx, newy) == 'f') {
-            std::cout << "DOWN " << std::endl;
             player->Player::movePlayer(button);
         }
 //        else if (map->Map::checkField(newx, newy) == 'e') {

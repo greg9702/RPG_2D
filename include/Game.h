@@ -18,7 +18,7 @@ class Game {
 private:
     bool game_over;
     char button;
-    char game_stage; // map view. fight view, eq view etc // TODO SET ENUM
+
 public:
     Game();
     ~Game();

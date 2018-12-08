@@ -41,13 +41,11 @@ void Player::movePlayer(const char &button) {
 }
 
 std::string Player::showStats() {
-//    std::cout << "(" << this->Player::retPosx() << "," << this->Player::retPosy() << ")" << std::endl
-//              << "HP: " << this->m_hp << std::endl
-//              << "ATACK: " << this->retAtk() << std::endl
-//              << "LVL: " << this->m_level << std::endl
-//              << "EXP: " << this->m_exp << std::endl
-//              << "GOLD: " << this->m_gold << std::endl;
-    return ( "(" + std::to_string(this->Player::retPosx()) + "," + std::to_string(this->Player::retPosy()) + ")" );
+std::string stats = "HEALTH      " + std::to_string(this->m_hp) +
+                    "\nATACK       " + std::to_string(this->m_atack) +
+                    "\nEXP         " + std::to_string(this->m_exp) +
+                    "\nLEVEL       " + std::to_string(this->m_level);
+    return stats;
 }
 
 
