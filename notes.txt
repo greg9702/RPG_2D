@@ -1,0 +1,44 @@
+
+#if 1
+#include <iostream>
+#include <string>
+#include <tuple>
+
+class Character {
+protected:
+    int m_posx;
+    int m_posy;
+    int m_lvl;
+    std::string m_name;
+public:
+    Character(const int& x_, const int& y_, const int& lvl_, const std::string& name_)
+            :m_posx(x_), m_posy(y_), m_lvl(lvl_), m_name(name_) { std::cout << "Character constructor called " << std::endl; }
+    virtual ~Character() { std::cout << "Character destructor called " << std::endl; };
+    virtual int retPosx() = 0;
+    virtual int retPosy() = 0;
+
+};
+
+class Player : public Character{
+private:
+
+public:
+    Player(const int& x_, const int& y_, const int& lvl_, const std::string& name_)
+            : Character(x_, y_, lvl_, name_) { std::cout << "Player constructor called" << std::endl; }
+    ~Player() { std::cout << "Player destructor called" << std::endl; };
+    int retPosx() override { return m_posx; }
+    int retPosy() override { return m_posy; }
+};
+
+//class Enemy : public Character{
+//
+//
+//};
+
+int main() {
+
+    Player newplayer(0, 0, 1, "Ezio");
+    return 0;
+}
+
+#endif
