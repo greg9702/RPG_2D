@@ -3,7 +3,7 @@
 Map::Map(std::vector<Object*> &objects_) {
     std::cout << "MAP CONSTRUCTOR CALLED" << std::endl;
     std::string line;
-    std::ifstream myfile ("map_template.txt"); // TODO move this to game_files folder
+    std::ifstream myfile ("../game_files/map_template.txt"); // TODO move this to game_files folder
     int j = 0;
     if (myfile.is_open())
     {
@@ -41,14 +41,15 @@ void Map::updateMap(std::vector<Object*> &objects_) {
     Map::fillMap(objects_);
 }
 
-int Map::checkField(const int &x_, const int &y_) {
-    if (this->map[y_][x_] == '*') {
+int Map::checkField(const int x_, const int y_) {
+    if ( this->map[y_][x_] == '*') {
         return WALL;
     } else if (this->map[y_][x_] == ' ') {
         return FREE;
     } else if (this->map[y_][x_] == 'e') {
         return ENEMY;
     }
+    return 99;
 }
 
 Map::~Map() {

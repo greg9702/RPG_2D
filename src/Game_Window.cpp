@@ -6,7 +6,6 @@
 Game_Window::Game_Window() {
     std::cout << "WINDOW CONSTRUCTOR CALLED" << std::endl;
     Windowx.create(sf::VideoMode(760,560), "RPG");
-    Windowx.clear();
     Windowx.setKeyRepeatEnabled(false);
     Windowx.setPosition(sf::Vector2i(50, 50));
     Windowx.setFramerateLimit(60);                  // set FPS
@@ -25,7 +24,7 @@ void Game_Window::drawWindow(Map* map_, Player* player_) {                      
     Windowx.clear();
 
     sf::Font font;
-    if (!font.loadFromFile("Sansation_Regular.ttf"))
+    if (!font.loadFromFile("../game_files/Sansation_Regular.ttf"))
         //find this file in the "pong" example in the SFML examples folder
     {
         std::cout << "Error loading font\n" ;
@@ -42,25 +41,25 @@ void Game_Window::drawWindow(Map* map_, Player* player_) {                      
 
     sf::Texture gTexture;
     sf::Sprite grassImage;
-    if(!gTexture.loadFromFile("grass.png"))
+    if(!gTexture.loadFromFile("../game_files/grass.png"))
         std::cout << "Cant load g image " << std::endl;
     grassImage.setTexture(gTexture);
 
     sf::Texture tTexture;
     sf::Sprite treeImage;
-    if(!tTexture.loadFromFile("tree.png"))
+    if(!tTexture.loadFromFile("../game_files/tree.png"))
         std::cout << "Cant load t image " << std::endl;
     treeImage.setTexture(tTexture);
 
     sf::Texture pTexture;
     sf::Sprite playerImage;
-    if(!pTexture.loadFromFile("player.png"))
+    if(!pTexture.loadFromFile("../game_files/player.png"))
         std::cout << "Cant load image " << std::endl;
     playerImage.setTexture(pTexture);
 
     sf::Texture eTexture;
     sf::Sprite enemyImage;
-    if(!eTexture.loadFromFile("enemy.png"))
+    if(!eTexture.loadFromFile("../game_files/enemy.png"))
         std::cout << "Cant load e image " << std::endl;
     enemyImage.setTexture(eTexture);
 
@@ -98,7 +97,7 @@ void Game_Window::drawWindow(Player *player_, Enemy *enemy_) {                  
     Windowx.clear();
 
     sf::Font font;
-    if (!font.loadFromFile("Sansation_Regular.ttf"))
+    if (!font.loadFromFile("../game_files/Sansation_Regular.ttf"))
     {
         std::cout << "Error loading font\n" ;
     }
@@ -126,7 +125,7 @@ void Game_Window::drawWindow() {                                             // 
     Windowx.clear();
 
     sf::Font font;
-    if (!font.loadFromFile("Sansation_Regular.ttf"))
+    if (!font.loadFromFile("../game_files/Sansation_Regular.ttf"))
     {
         std::cout << "Error loading font\n" ;
     }

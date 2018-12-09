@@ -15,26 +15,18 @@
 #include "Enemy.h"
 #include "Fight.h"
 
+enum Game_stage {
+    MAP_VIEW,
+    FIGHT_VIEW,
+    END_SCREEN
+};
+
 class Game {
 private:
     bool game_over;
     char button;
-    enum Game_stage {
-        MAP_VIEW,
-        FIGHT_VIEW,
-        END_SCREEN
-    };
-    enum Fight_status {
-        FIGHT_IN_PROG,
-        RUN_AWAY,
-        FIGHT_WON,
-        FIGHT_LOST
-    };
-    enum Map_field {
-        WALL,
-        FREE,
-        ENEMY
-    };
+
+
     Game_stage game_stage;
 public:
     Game();

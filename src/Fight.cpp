@@ -34,8 +34,3 @@ void Fight::Fight_update() {
         fight_control = FIGHT_WON;
     }
 }
-
-void Fight::setFight(const int &status) {
-    fight_control = RUN_AWAY;
-}
-

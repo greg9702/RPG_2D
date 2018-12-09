@@ -24,7 +24,6 @@ Game::~Game() {                                                 //TODO fix mem l
     for (auto &i : objects) {   // delete all objects on map
         delete i;
     }
-
 }
 
 void Game::start() {
@@ -175,6 +174,7 @@ Object *Game::retObjPointer(std::vector<Object *> &objects_, const int &x_, cons
             return i;
         }
     }
+    return nullptr;
 }
 
 std::string Game::getCurrentTimestamp()                                 //fuction display time
