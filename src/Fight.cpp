@@ -4,23 +4,38 @@
 
 #include "Fight.h"
 
-Fight::Fight(Player* player_, Enemy* enemy_) : fight_last(1){
-    startFight(player_,enemy_);
+Fight::Fight(Player* player, Enemy* enemy) {
+    std::cout << "FIGHT CONSTRUCTOR CALLED" << std::endl;
+    player_ = player;
+    enemy_ = enemy;
+    fight_control = FIGHT_IN_PROG;
 }
 
 Fight::~Fight() {
-    std::cout << "Fight destroyed" << std::endl;
+    std::cout << "FIGHT DESTRUCTOR CALLED" << std::endl;
 }
 
-bool Fight::retFight_status() {
-    return this->fight_last;
+int Fight::retFight_status() {
+    return fight_control;
 }
 
-void Fight::startFight(Player* player_, Enemy* enemy_) {
-    std::cout << "PH" << player_->retHp() << std::endl;
-    std::cout << "EH" << enemy_->retHp() << std::endl;
+void Fight::action_atack() {
+    player_->takeDamage(enemy_->retAtk());
+    enemy_->takeDamage(player_->retAtk());
+    Fight::Fight_update();
 }
 
-void Fight::setFight(const bool &number) {
-    this->fight_last = number;
+void Fight::Fight_update() {
+    if (player_->retHp() <= 0) {
+        fight_control = FIGHT_LOST;
+    }
+    if (enemy_->retHp() <= 0) {
+        player_->getLoot(enemy_->dropLoot());
+        fight_control = FIGHT_WON;
+    }
 }
+
+void Fight::setFight(const int &status) {
+    fight_control = RUN_AWAY;
+}
+

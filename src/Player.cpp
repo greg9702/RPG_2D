@@ -2,6 +2,7 @@
 
 Player::Player(const int &x_, const int &y_, const char& type_, const int &lvl_, const int& hp_, const int& atk_, const int& arm_, const int& exp_, const int& gold_)
         : Object(x_, y_, type_), Character(lvl_, hp_, atk_, arm_, exp_, gold_) {
+    std::cout << "PLAYER CONSTRUCTOR CALLED" << std::endl;
 //    Equipment.push_back(new Weapon(0,"LITTLE SWORD",'w',5));
 //    Equipment.push_back(new Armour(0,"LEATHER COAT",'a',5));
 //    Equipment.push_back(new Weapon(10,"TINY AXE",'w',10));
@@ -9,7 +10,7 @@ Player::Player(const int &x_, const int &y_, const char& type_, const int &lvl_,
 }
 
 Player::~Player() {
-    std::cout << "Player destructor called" << std::endl;
+    std::cout << "PLAYER DESTRUCTOR CALLED" << std::endl;
 //    for (auto &i : Equipment) {
 //        delete i;
 //    }
@@ -44,7 +45,8 @@ std::string Player::showStats() {
 std::string stats = "HEALTH      " + std::to_string(this->m_hp) +
                     "\nATACK       " + std::to_string(this->m_atack) +
                     "\nEXP         " + std::to_string(this->m_exp) +
-                    "\nLEVEL       " + std::to_string(this->m_level);
+                    "\nLEVEL       " + std::to_string(this->m_level) +
+                    "\nGOLD       " + std::to_string(this->m_gold);
     return stats;
 }
 
@@ -55,12 +57,13 @@ char Player::retType() {
 
 void Player::takeDamage(const int& atack_) {
     this->m_hp = this->m_hp - atack_; //+ this->m_armor + (dynamic_cast<Armour*>(Equipment.at(1)))->retArmArm();
-    std::cout << "Enemy atacked for " << atack_ - this->m_armor << std::endl;
 }
 
 void Player::updatePlayer() {
-    if (this->retHp() <= 0) throw -1;
-    //this->m_atack += (dynamic_cast<Weapon*>(Equipment.at(0)))->retWeapAtk();
+    if (this->m_exp >= this->m_level * 10) {
+        this->m_exp -= this->m_level*10;
+        this->m_level++;
+    }
 }
 
 void Player::getLoot(const std::vector<int> &loot_) {

@@ -21,7 +21,19 @@ private:
     char button;
     enum Game_stage {
         MAP_VIEW,
-        FIGHT_VIEW
+        FIGHT_VIEW,
+        END_SCREEN
+    };
+    enum Fight_status {
+        FIGHT_IN_PROG,
+        RUN_AWAY,
+        FIGHT_WON,
+        FIGHT_LOST
+    };
+    enum Map_field {
+        WALL,
+        FREE,
+        ENEMY
     };
     Game_stage game_stage;
 public:
@@ -35,8 +47,7 @@ public:
     Game_Window * game_window;
     Player* player;                 // TODO change to smart pointers
     Map* map;
-    Enemy* enemy1;                  // TODO more enemies - need to create some kind of array or vector
-    Enemy* enemy2;
+    std::vector<Enemy*> enemies;
     Enemy* enemy;
     Fight* fight;
     std::vector<Object*> objects;   // interface for all objects on map

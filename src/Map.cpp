@@ -1,6 +1,7 @@
 #include "Map.h"
 
 Map::Map(std::vector<Object*> &objects_) {
+    std::cout << "MAP CONSTRUCTOR CALLED" << std::endl;
     std::string line;
     std::ifstream myfile ("map_template.txt"); // TODO move this to game_files folder
     int j = 0;
@@ -40,16 +41,16 @@ void Map::updateMap(std::vector<Object*> &objects_) {
     Map::fillMap(objects_);
 }
 
-char Map::checkField(const int &x_, const int &y_) {
+int Map::checkField(const int &x_, const int &y_) {
     if (this->map[y_][x_] == '*') {
-        return 'w';  // w means wall
+        return WALL;
     } else if (this->map[y_][x_] == ' ') {
-        return 'f';  // f means free
+        return FREE;
     } else if (this->map[y_][x_] == 'e') {
-        return 'e';  // e means free
+        return ENEMY;
     }
 }
 
 Map::~Map() {
-    std::cout << "Map destructor called" << std::endl;
+    std::cout << "MAP DESTRUCTOR CALLED" << std::endl;
 }
