@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(RPG)
 
 set(CMAKE_CXX_STANDARD 17)
-
+#this probably isn't necessary
 set(SFML_INCLUDE_DIR "~/greg9702/Downloads/SFML-2.5.1/include")
 set(SFML_LIBRARY_DIR "~/greg9702/Downloads/SFML-2.5.1/lib")
 link_directories("~/greg9702/Downloads/SFML-2.5.1/lib")
@@ -11,7 +11,6 @@ set(SFML_DIR "~/greg9702/Downloads/SFML-2.5.1/lib/cmake/SFML")
 
 find_package (OpenGL)
 if(SFML_FOUND)
-    message("WESZLO")
     message(STATUS "SFML_INCLUDE_DIRS: ${SFML_INCLUDE_DIR}")
     message(STATUS "SFML_LIBRARIES: ${SFML_LIBRARIES}")
     message(STATUS "SFML_VERSION: ${SFML_VERSION}")
