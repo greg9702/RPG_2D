@@ -4,7 +4,7 @@
 
 #include "Character.h"
 
-Character::Character(const int &lvl_, const int& hp_, const int& atk_, const int& arm_, const int& exp_, const int& gold_) : m_hp(hp_), m_level(lvl_), m_atack(atk_), m_armor(arm_), m_gold(gold_), m_exp(exp_){
+Character::Character(const int &lvl_, const int& hp_, const int& atk_, const int& arm_, const int& exp_, const int& gold_) : hp(hp_), level(lvl_), atack(atk_), armor(arm_), gold(gold_), exp(exp_){
     std::cout << "CHARACTER CONSTRUCTOR CALLED" << std::endl;
 }
 
@@ -13,9 +13,9 @@ Character::~Character() {
 }
 
 int Character::retHp() {
-    return m_hp;
+    return hp;
 }
 
 int Character::retAtk() {
-    return m_atack;
+    return atack;
 }

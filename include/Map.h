@@ -8,6 +8,8 @@
 #include <fstream>
 #include <string>
 
+#define Map_size 20
+
 enum Map_field {
     WALL,
     FREE,
@@ -16,10 +18,9 @@ enum Map_field {
 
 class Map {
 private:
-    const static int length{20};
-    const static int width{20};
-    char clean_map[width][length];
-
+    const static int length{Map_size};
+    const static int width{Map_size};
+    char clean_map[width][length]; // clean map temaplate
 public:
     char map[width][length];
     Map(std::vector<Object*> &objects_);

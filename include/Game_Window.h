@@ -10,19 +10,19 @@
 #include <SFML/Window.hpp>
 #include <SFML/OpenGL.hpp>
 #include <SFML/Graphics/Vertex.hpp>
-#include <iostream>
-#include <ctime>
-#include <vector>
-#include <fstream>
-#include <string>
 #include <SFML/Graphics.hpp>
 #include <SFML/Main.hpp>
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 #include <chrono>
+#include <iostream>
+#include <ctime>
+#include <vector>
+#include <fstream>
+#include <string>
 
-class Game_Window {
+class Game_Window {                             // TODO clean this class
 public:
     Game_Window();
     ~Game_Window();
@@ -30,6 +30,14 @@ public:
     void drawWindow(Player* player_, Enemy* enemy_);
     void drawWindow();
     sf::RenderWindow Windowx;
+    sf::Texture gTexture;
+    sf::Sprite grassImage; // grass object image
+    sf::Texture tTexture;
+    sf::Sprite treeImage;
+    sf::Texture pTexture;
+    sf::Sprite playerImage;
+    sf::Texture eTexture;
+    sf::Font font;
 };
 
 #endif

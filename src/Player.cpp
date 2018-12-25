@@ -16,24 +16,24 @@ Player::~Player() {
 //    }
 }
 
-int Player::retPosx() { return this->m_posx; }
+int Player::retPosx() { return this->posx; }
 
-int Player::retPosy() { return this->m_posy; }
+int Player::retPosy() { return this->posy; }
 
 void Player::movePlayer(const char &button) {
     std::cout << button << std::endl;
     switch (button) {
         case 'a':
-            this->m_posx -= 1;
+            this->posx -= 1;
             break;
         case 'd':
-            this->m_posx += 1;
+            this->posx += 1;
             break;
         case 'w':
-            this->m_posy -= 1;
+            this->posy -= 1;
             break;
         case 's':
-            this->m_posy += 1;
+            this->posy += 1;
             break;
 
         default:
@@ -42,11 +42,11 @@ void Player::movePlayer(const char &button) {
 }
 
 std::string Player::showStats() {
-std::string stats = "HEALTH      " + std::to_string(this->m_hp) +
-                    "\nATACK       " + std::to_string(this->m_atack) +
-                    "\nEXP         " + std::to_string(this->m_exp) +
-                    "\nLEVEL       " + std::to_string(this->m_level) +
-                    "\nGOLD       " + std::to_string(this->m_gold);
+std::string stats = "HEALTH      " + std::to_string(this->hp) +
+                    "\nATACK       " + std::to_string(this->atack) +
+                    "\nEXP         " + std::to_string(this->exp) +
+                    "\nLEVEL       " + std::to_string(this->level) +
+                    "\nGOLD       " + std::to_string(this->gold);
     return stats;
 }
 
@@ -56,23 +56,23 @@ char Player::retType() {
 }
 
 void Player::takeDamage(const int& atack_) {
-    this->m_hp = this->m_hp - atack_; //+ this->m_armor + (dynamic_cast<Armour*>(Equipment.at(1)))->retArmArm();
+    this->hp = this->hp - atack_; //+ this->m_armor + (dynamic_cast<Armour*>(Equipment.at(1)))->retArmArm();
 }
 
 void Player::updatePlayer() {
-    if (this->m_exp >= this->m_level * 10) {
-        this->m_exp -= this->m_level*10;
-        this->m_level++;
+    if (this->exp >= this->level * 10) {
+        this->exp -= this->level*10;
+        this->level++;
     }
 }
 
 void Player::getLoot(const std::vector<int> &loot_) {
-    this->m_exp +=loot_.at(0);
-    this->m_gold +=loot_.at(1);
+    this->exp +=loot_.at(0);
+    this->gold +=loot_.at(1);
 }
 
 int Player::retAtk() {
-    return this->m_atack; //+ (dynamic_cast<Weapon*>(Equipment.at(0)))->retWeapAtk();
+    return this->atack; //+ (dynamic_cast<Weapon*>(Equipment.at(0)))->retWeapAtk();
 }
 
 //void Player::showEquipment() {                                              // TODO fix all bugs!!!

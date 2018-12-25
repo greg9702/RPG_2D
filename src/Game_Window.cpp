@@ -10,10 +10,17 @@ Game_Window::Game_Window() {
     Windowx.setPosition(sf::Vector2i(50, 50));
     Windowx.setFramerateLimit(60);                  // set FPS
 
-    //Window.setSize(sf::Vector2u(640, 480));
-    // run the program as long as the window is open
-    //Window.setSize(sf::Vector2u(640, 480));
+    if(!gTexture.loadFromFile("../game_files/grass.png")) {
+        std::cout << "Cant load g image " << std::endl;
+    }
+    if(!pTexture.loadFromFile("../game_files/player.png"))
+        std::cout << "Cant load image " << std::endl;
+    if(!tTexture.loadFromFile("../game_files/tree.png"))
+        std::cout << "Cant load t image " << std::endl;
 
+    if (!font.loadFromFile("../game_files/Sansation_Regular.ttf")) {
+        std::cout << "Error loading font\n" ;
+    }
 }
 
 Game_Window::~Game_Window() {
@@ -23,41 +30,16 @@ Game_Window::~Game_Window() {
 void Game_Window::drawWindow(Map* map_, Player* player_) {                      // MAP VIEW WINDOW
     Windowx.clear();
 
-    sf::Font font;
-    if (!font.loadFromFile("../game_files/Sansation_Regular.ttf"))
-        //find this file in the "pong" example in the SFML examples folder
-    {
-        std::cout << "Error loading font\n" ;
-    }
+    treeImage.setTexture(tTexture);
+    playerImage.setTexture(pTexture);
+    grassImage.setTexture(gTexture);
 
     sf::Text text;
     text.setFont(font);
     text.setString(player_->showStats());
     text.setCharacterSize(20); // in pixels, not points!
-    //text.setStyle(sf::Text::Bold );
     text.setPosition(40,400);
 
-// inside the main loop, between window.clear() and window.display()
-
-    sf::Texture gTexture;
-    sf::Sprite grassImage;
-    if(!gTexture.loadFromFile("../game_files/grass.png"))
-        std::cout << "Cant load g image " << std::endl;
-    grassImage.setTexture(gTexture);
-
-    sf::Texture tTexture;
-    sf::Sprite treeImage;
-    if(!tTexture.loadFromFile("../game_files/tree.png"))
-        std::cout << "Cant load t image " << std::endl;
-    treeImage.setTexture(tTexture);
-
-    sf::Texture pTexture;
-    sf::Sprite playerImage;
-    if(!pTexture.loadFromFile("../game_files/player.png"))
-        std::cout << "Cant load image " << std::endl;
-    playerImage.setTexture(pTexture);
-
-    sf::Texture eTexture;
     sf::Sprite enemyImage;
     if(!eTexture.loadFromFile("../game_files/enemy.png"))
         std::cout << "Cant load e image " << std::endl;
@@ -65,11 +47,10 @@ void Game_Window::drawWindow(Map* map_, Player* player_) {                      
 
     int xposition = 0;
     int yposition = 0;
-    // check all the window's events that were triggered since the last iteration of the loop
 
-    for (int i = 0; i < 20; i++ ) {
-        for(int j = 0; j < 40; j++ ) {
-            // if ()
+    for (int i = 0; i < Map_size; i++ ) {
+        for(int j = 0; j < 2 * Map_size; j++ ) {
+
             if (map_->map[i][j] == ' ') {
                 grassImage.setPosition(xposition, yposition);
                 Windowx.draw(grassImage);
@@ -79,8 +60,7 @@ void Game_Window::drawWindow(Map* map_, Player* player_) {                      
             }else if (map_->map[i][j] == 'p') {
                 playerImage.setPosition(xposition, yposition);
                 Windowx.draw(playerImage);
-            }
-            else if (map_->map[i][j] == 'e') {
+            }else if (map_->map[i][j] == 'e') {
                 enemyImage.setPosition(xposition, yposition);
                 Windowx.draw(enemyImage);
             }
@@ -124,12 +104,6 @@ void Game_Window::drawWindow(Player *player_, Enemy *enemy_) {                  
 void Game_Window::drawWindow() {                                             // END GAME WINDOW
     Windowx.clear();
 
-    sf::Font font;
-    if (!font.loadFromFile("../game_files/Sansation_Regular.ttf"))
-    {
-        std::cout << "Error loading font\n" ;
-    }
-
     sf::Text text;
     text.setFont(font);
     std::string stext;
@@ -138,7 +112,6 @@ void Game_Window::drawWindow() {                                             // 
     text.setCharacterSize(48); // in pixels, not points!
     //text.setStyle(sf::Text::Bold );
     text.setPosition(0,0);
-
 
     Windowx.draw(text);
     Windowx.display();

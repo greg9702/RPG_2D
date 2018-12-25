@@ -9,8 +9,8 @@ Map::Map(std::vector<Object*> &objects_) {
     {
         while ( getline (myfile,line) )
         {
-            for(int i = 0; i < 20; i++) {
-                this->clean_map[j][i] = line[i];            // TODO throw error when .at() // X and Y vice versa
+            for(int i = 0; i < Map_size; i++) {
+                this->clean_map[j][i] = line[i];
             }
             j++;
         }
@@ -24,9 +24,9 @@ Map::Map(std::vector<Object*> &objects_) {
 }
 
 void Map::fillMap(std::vector<Object*> &objects_) {
-    for(int j = 0; j < 20; j++) {
+    for(int j = 0; j < Map_size; j++) {
         {
-            for(int i = 0; i < 20; i++) {
+            for(int i = 0; i < Map_size; i++) {
                 this->map[j][i] = this->clean_map[j][i];
             }
         }

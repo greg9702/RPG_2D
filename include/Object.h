@@ -6,9 +6,9 @@
 
 class Object {  // this class is only an interface for all object on map
 protected:
-    int m_posx;
-    int m_posy;
-    char m_type; // keep information about object // all parameters are set by constructor
+    int posx;
+    int posy;
+    char type; // keep information about object // all parameters are set by constructor
 public:
     Object(const int& x_, const int& y_, const char& typ_);
     virtual ~Object() = 0;

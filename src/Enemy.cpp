@@ -9,11 +9,11 @@ Enemy::Enemy(const int &x_, const int &y_, const char& type_, const int &lvl_, c
 Enemy::~Enemy() { std::cout << "ENEMY DESTRUCTOR CALLED! " << std::endl; }
 
 int Enemy::retPosx() {
-    return this->m_posx;
+    return this->posx;
 }
 
 int Enemy::retPosy() {
-    return this->m_posy;
+    return this->posy;
 }
 
 char Enemy::retType() {
@@ -21,14 +21,14 @@ char Enemy::retType() {
 }
 
 void Enemy::takeDamage(const int& atack_) {
-    this->m_hp = this->m_hp - atack_ + this->m_armor;
+    this->hp = this->hp - atack_ + this->armor;
     //std::cout << "Player atacked for " << atack_ - this->m_armor << std::endl;
 }
 
 std::vector<int> Enemy::dropLoot() {
     std::vector<int> loot;
-    loot.push_back(this->m_exp);
-    loot.push_back(this->m_gold);
+    loot.push_back(this->exp);
+    loot.push_back(this->gold);
     return loot;
 }
 

@@ -9,12 +9,12 @@
 
 class Character {
 protected:
-    int m_hp;
-    int m_level;
-    int m_exp;
-    int m_atack;
-    int m_armor;
-    int m_gold;
+    int hp;
+    int level;
+    int exp;
+    int atack;
+    int armor;
+    int gold;
 public:
     Character(const int &hp_, const int& lvl_, const int& atk_, const int& arm_, const int& exp_, const int& gold_);
     ~Character();
