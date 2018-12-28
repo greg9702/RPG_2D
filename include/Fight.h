@@ -10,7 +10,6 @@
 
 enum Fight_status {
     FIGHT_IN_PROG,
-    RUN_AWAY,
     FIGHT_WON,
     FIGHT_LOST
 };
@@ -24,7 +23,7 @@ public:
     Fight(Player* player, Enemy* enemy);
     ~Fight();
     int retFight_status();
-    void action_atack();
+    void action_attack();
     void Fight_update();
 };
 

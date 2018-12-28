@@ -9,13 +9,13 @@ class Enemy : public Object, public Character {
 private:
 
 public:
-    Enemy(const int &x_, const int &y_, const char& type_, const int &lvl_, const int& hp_, const int& atk_, const int& arm_, const int& exp_, const int& gold_);
+    Enemy(const int &x_, const int &y_, const int& type_, const int &lvl_, const int& hp_, const int& atk_, const int& arm_, const int& exp_, const int& gold_);
     ~Enemy() override ;
-    int retPosx() override;
-    int retPosy() override;
-    char retType() override;
-    std::vector<int> dropLoot();         // return gold and exp TODO what return type???
-    void takeDamage(const int& atack_);
+    int retPosx() const override;
+    int retPosy() const override;
+    int retType() const override;
+    std::vector<int> dropLoot();         // return gold and exp
+    void takeDamage(const int& attack_);
 };
 
 #endif

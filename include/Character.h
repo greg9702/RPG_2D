@@ -1,7 +1,3 @@
-//
-// Created by greg9702 on 12/4/18.
-//
-
 #ifndef RPG_CHARACTER_H
 #define RPG_CHARACTER_H
 
@@ -12,13 +8,13 @@ protected:
     int hp;
     int level;
     int exp;
-    int atack;
+    int attack;
     int armor;
     int gold;
 public:
     Character(const int &hp_, const int& lvl_, const int& atk_, const int& arm_, const int& exp_, const int& gold_);
     ~Character();
-    int retHp();
-    virtual int retAtk();
+    int retHp() const;
+    virtual int retAtk() const;
 };
-#endif //RPG_CHARACTER_H
+#endif

@@ -1,6 +1,3 @@
-//
-// Created by greg9702 on 12/8/18.
-//
 #include "Game_Window.h"
 
 Game_Window::Game_Window() {
@@ -10,17 +7,17 @@ Game_Window::Game_Window() {
     Windowx.setPosition(sf::Vector2i(50, 50));
     Windowx.setFramerateLimit(60);                  // set FPS
 
-    if(!gTexture.loadFromFile("../game_files/grass.png")) {
+    if(!gTexture.loadFromFile("../game_files/grass.png"))
         std::cout << "Cant load g image " << std::endl;
-    }
     if(!pTexture.loadFromFile("../game_files/player.png"))
         std::cout << "Cant load image " << std::endl;
     if(!tTexture.loadFromFile("../game_files/tree.png"))
         std::cout << "Cant load t image " << std::endl;
+    if(!eTexture.loadFromFile("../game_files/enemy.png"))
+        std::cout << "Cant load e image " << std::endl;
 
-    if (!font.loadFromFile("../game_files/Sansation_Regular.ttf")) {
+    if (!font.loadFromFile("../game_files/Sansation_Regular.ttf"))
         std::cout << "Error loading font\n" ;
-    }
 }
 
 Game_Window::~Game_Window() {
@@ -40,9 +37,6 @@ void Game_Window::drawWindow(Map* map_, Player* player_) {                      
     text.setCharacterSize(20); // in pixels, not points!
     text.setPosition(40,400);
 
-    sf::Sprite enemyImage;
-    if(!eTexture.loadFromFile("../game_files/enemy.png"))
-        std::cout << "Cant load e image " << std::endl;
     enemyImage.setTexture(eTexture);
 
     int xposition = 0;

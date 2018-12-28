@@ -32,8 +32,8 @@ void Map::fillMap(std::vector<Object*> &objects_) {
         }
     }
     for (auto& i : objects_) {
-        if (i->retType() == 'p') map [i->retPosy()][i->retPosx()] = 'p'; // draw player
-        if (i->retType() == 'e') map [i->retPosy()][i->retPosx()] = 'e'; // draw enemies
+        if (i->retType() == PLAYER) map [i->retPosy()][i->retPosx()] = 'p'; // draw player
+        if (i->retType() == ENEMY) map [i->retPosy()][i->retPosx()] = 'e'; // draw enemies
     }
 }
 
@@ -41,7 +41,7 @@ void Map::updateMap(std::vector<Object*> &objects_) {
     Map::fillMap(objects_);
 }
 
-int Map::checkField(const int x_, const int y_) {
+int Map::checkField(const int x_, const int y_) const {
     if ( this->map[y_][x_] == '*') {
         return WALL;
     } else if (this->map[y_][x_] == ' ') {

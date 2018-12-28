@@ -3,11 +3,11 @@
 Game::Game()
         : game_over(false){
     std::cout << "GAME CONSTRUCTOR CALLED" << std::endl;
-    player = new Player(1,1,'p', 1, 100, 25, 10, 0, 0);
+    player = new Player(1,1, PLAYER, 1, 100, 25, 10, 0, 0);
     objects.push_back(player);
-    enemies.push_back(new Enemy(5,5,'e', 1, 55, 10, 5, 40, 10));
-    enemies.push_back(new Enemy(3,3,'e',1, 54, 20, 5, 5, 10));
-    enemies.push_back(new Enemy(10,3,'e',1, 82, 32, 5, 5, 10));
+    enemies.push_back(new Enemy(5,5, ENEMY, 1, 55, 15, 5, 40, 10));
+    enemies.push_back(new Enemy(3,3, ENEMY,1, 54, 10, 5, 5, 10));
+    enemies.push_back(new Enemy(10,3,ENEMY,1, 82, 32, 5, 5, 10));
     for (auto i : enemies) {
         objects.push_back(i);
     }
@@ -130,6 +130,7 @@ void Game::action(const char &button_) {
             player->Player::movePlayer(button);
         }
     }
+
     if (game_stage == FIGHT_VIEW) {
         switch (button) {
             case '2': {                   //run away
@@ -139,7 +140,7 @@ void Game::action(const char &button_) {
                 break;
             }
             case '1': {
-                fight->action_atack();
+                fight->action_attack();
                 break;
             }
             default:
@@ -160,10 +161,13 @@ void Game::action(const char &button_) {
             game_stage = MAP_VIEW;
         }
     }
+
     if (game_stage == END_SCREEN) {
         switch (button) {
             case '0' :
                 game_over = true;
+            default:
+                break;
         }
     }
 }

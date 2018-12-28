@@ -10,11 +10,7 @@
 
 #define Map_size 20
 
-enum Map_field {
-    WALL,
-    FREE,
-    ENEMY
-};
+
 
 class Map {
 private:
@@ -27,7 +23,7 @@ public:
     ~Map();
     void updateMap(std::vector<Object*> &objects_);
     void fillMap(std::vector<Object*> &objects_);
-    int checkField(const int x_, const int y_);     //TODO make handling of default case
+    int checkField  (const int x_, const int y_) const;     //TODO make handling of default case
 };
 
 #endif

@@ -4,17 +4,24 @@
 #include <iostream>
 #include <string>
 
+enum Object_type {
+    WALL,
+    FREE,
+    ENEMY,
+    PLAYER
+};
+
 class Object {  // this class is only an interface for all object on map
 protected:
     int posx;
     int posy;
-    char type; // keep information about object // all parameters are set by constructor
+    int type; // keep information about object // all parameters are set by constructor
 public:
-    Object(const int& x_, const int& y_, const char& typ_);
+    Object(const int& x_, const int& y_, const int& typ_);
     virtual ~Object() = 0;
-    virtual int retPosx() = 0;
-    virtual int retPosy() = 0; // show position
-    virtual char retType() = 0;
+    virtual int retPosx() const = 0;
+    virtual int retPosy() const = 0; // show position
+    virtual int retType() const = 0;
 };
 
 #endif

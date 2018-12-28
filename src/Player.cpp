@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player::Player(const int &x_, const int &y_, const char& type_, const int &lvl_, const int& hp_, const int& atk_, const int& arm_, const int& exp_, const int& gold_)
+Player::Player(const int &x_, const int &y_, const int& type_, const int &lvl_, const int& hp_, const int& atk_, const int& arm_, const int& exp_, const int& gold_)
         : Object(x_, y_, type_), Character(lvl_, hp_, atk_, arm_, exp_, gold_) {
     std::cout << "PLAYER CONSTRUCTOR CALLED" << std::endl;
 //    Equipment.push_back(new Weapon(0,"LITTLE SWORD",'w',5));
@@ -16,9 +16,9 @@ Player::~Player() {
 //    }
 }
 
-int Player::retPosx() { return this->posx; }
+int Player::retPosx() const { return this->posx; }
 
-int Player::retPosy() { return this->posy; }
+int Player::retPosy() const { return this->posy; }
 
 void Player::movePlayer(const char &button) {
     std::cout << button << std::endl;
@@ -43,7 +43,7 @@ void Player::movePlayer(const char &button) {
 
 std::string Player::showStats() {
 std::string stats = "HEALTH      " + std::to_string(this->hp) +
-                    "\nATACK       " + std::to_string(this->atack) +
+                    "\nATACK       " + std::to_string(this->attack) +
                     "\nEXP         " + std::to_string(this->exp) +
                     "\nLEVEL       " + std::to_string(this->level) +
                     "\nGOLD       " + std::to_string(this->gold);
@@ -51,12 +51,12 @@ std::string stats = "HEALTH      " + std::to_string(this->hp) +
 }
 
 
-char Player::retType() {
-    return 'p';
+int Player::retType() const {
+    return PLAYER;
 }
 
-void Player::takeDamage(const int& atack_) {
-    this->hp = this->hp - atack_; //+ this->m_armor + (dynamic_cast<Armour*>(Equipment.at(1)))->retArmArm();
+void Player::takeDamage(const int& attack_) {
+    this->hp = this->hp - attack_; //+ this->m_armor + (dynamic_cast<Armour*>(Equipment.at(1)))->retArmArm();
 }
 
 void Player::updatePlayer() {
@@ -71,8 +71,8 @@ void Player::getLoot(const std::vector<int> &loot_) {
     this->gold +=loot_.at(1);
 }
 
-int Player::retAtk() {
-    return this->atack; //+ (dynamic_cast<Weapon*>(Equipment.at(0)))->retWeapAtk();
+int Player::retAtk() const {
+    return this->attack; //+ (dynamic_cast<Weapon*>(Equipment.at(0)))->retWeapAtk();
 }
 
 //void Player::showEquipment() {                                              // TODO fix all bugs!!!

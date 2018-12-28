@@ -1,7 +1,3 @@
-//
-// Created by greg9702 on 12/8/18.
-//
-
 #ifndef WINDOW_H
 #define WINDOW_H
 
@@ -37,6 +33,7 @@ public:
     sf::Texture pTexture;
     sf::Sprite playerImage;
     sf::Texture eTexture;
+    sf::Sprite enemyImage;
     sf::Font font;
 };
 

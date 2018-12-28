@@ -19,7 +19,7 @@ int Fight::retFight_status() {
     return fight_control;
 }
 
-void Fight::action_atack() {
+void Fight::action_attack() {
     player_->takeDamage(enemy_->retAtk());
     enemy_->takeDamage(player_->retAtk());
     Fight::Fight_update();
