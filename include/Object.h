@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-
+#include <memory>
 enum Object_type {
     WALL,
     FREE,

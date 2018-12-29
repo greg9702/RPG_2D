@@ -11,20 +11,23 @@
 enum Fight_status {
     FIGHT_IN_PROG,
     FIGHT_WON,
+    RUN_AWAY,
     FIGHT_LOST
 };
 
 class Fight {
 private:
-    Player* player_;
-    Enemy* enemy_;
-    Fight_status fight_control;
+    std::shared_ptr<Player> player_;
+    std::shared_ptr<Enemy> enemy_;
+    int fight_control;
 public:
-    Fight(Player* player, Enemy* enemy);
+    Fight(std::shared_ptr<Player> player, std::shared_ptr<Enemy> enemy);
     ~Fight();
     int retFight_status();
     void action_attack();
     void Fight_update();
+
+    void setFight_status(int status);
 };
 
 #endif //RPG_FIGHT_H

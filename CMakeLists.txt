@@ -31,7 +31,7 @@ endif()
 #SET (CMAKE_CXX_FLAGS_INIT "-fsanitize=leak -fno-omit-frame-pointer -g -lsfml-windowdsfs -lsfml-system -lGLU -lGL")
 include_directories(include)
 file(GLOB SOURCES "src/*.cpp" "include/*.h")
-add_executable(game ${SOURCES})
+add_executable(game ${SOURCES} )
 SET(GCC_COMPILE_FLAGS "-g -lsfml-window -lsfml-system -lGLU -lGL")
 target_link_libraries (game sfml-graphics sfml-window sfml-system -fsanitize=leak -fno-omit-frame-pointer -g -lsfml-system -lGLU -lGL)
 #export CC=/usr/bin/clang

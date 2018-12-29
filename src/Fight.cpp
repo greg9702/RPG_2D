@@ -4,7 +4,7 @@
 
 #include "Fight.h"
 
-Fight::Fight(Player* player, Enemy* enemy) {
+Fight::Fight(std::shared_ptr<Player> player, std::shared_ptr<Enemy> enemy) {
     std::cout << "FIGHT CONSTRUCTOR CALLED" << std::endl;
     player_ = player;
     enemy_ = enemy;
@@ -16,7 +16,7 @@ Fight::~Fight() {
 }
 
 int Fight::retFight_status() {
-    return fight_control;
+    return this->fight_control;
 }
 
 void Fight::action_attack() {
@@ -33,4 +33,8 @@ void Fight::Fight_update() {
         player_->getLoot(enemy_->dropLoot());
         fight_control = FIGHT_WON;
     }
+}
+
+void Fight::setFight_status(int status) {
+    this->fight_control = status;
 }

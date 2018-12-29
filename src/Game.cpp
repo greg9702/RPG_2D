@@ -1,29 +1,25 @@
 #include "Game.h"
+#include <memory>
 
 Game::Game()
         : game_over(false){
     std::cout << "GAME CONSTRUCTOR CALLED" << std::endl;
-    player = new Player(1,1, PLAYER, 1, 100, 25, 10, 0, 0);
+    player = std::make_shared<Player>(1,1, PLAYER, 1, 100, 25, 10, 0, 0);
     objects.push_back(player);
-    enemies.push_back(new Enemy(5,5, ENEMY, 1, 55, 15, 5, 40, 10));
-    enemies.push_back(new Enemy(3,3, ENEMY,1, 54, 10, 5, 5, 10));
-    enemies.push_back(new Enemy(10,3,ENEMY,1, 82, 32, 5, 5, 10));
+    enemies.push_back(std::make_shared<Enemy>(5,5, ENEMY, 1, 55, 15, 5, 40, 10));
+    enemies.push_back(std::make_shared<Enemy>(3,3, ENEMY,1, 54, 10, 5, 5, 10));
+    enemies.push_back(std::make_shared<Enemy>(10,3,ENEMY,1, 82, 32, 5, 5, 10));
     for (auto i : enemies) {
         objects.push_back(i);
     }
-    map = new Map(objects);
-    game_window = new Game_Window();
+    map = std::make_unique<Map>(objects);
+    game_window = std::make_unique<Game_Window>();
     game_stage = MAP_VIEW;
     Game::start();
 }
 
-Game::~Game() {                                                 //TODO fix mem leak
+Game::~Game() {
     std::cout << "GAME DESTRUCTOR CALLED" << std::endl;
-    delete game_window;
-    delete map;                 // delete map
-    for (auto &i : objects) {   // delete all objects on map
-        delete i;
-    }
 }
 
 void Game::start() {
@@ -122,8 +118,11 @@ void Game::action(const char &button_) {
                 break;
         }
         if (map->Map::checkField(newx, newy) == ENEMY) {
-            enemy = dynamic_cast<Enemy *>(retObjPointer(objects, newx, newy));
-            fight = new Fight(player,enemy);
+            std::cout << "FIGHT " << std::endl;
+            enemy = std::dynamic_pointer_cast<Enemy>(retObjPointer(objects, newx, newy));
+
+            std::cout << enemy << std::endl;
+            fight = std::make_unique<Fight>(player, enemy);
             game_stage = FIGHT_VIEW;
         }
         if (map->Map::checkField(newx, newy) == FREE) {
@@ -134,9 +133,7 @@ void Game::action(const char &button_) {
     if (game_stage == FIGHT_VIEW) {
         switch (button) {
             case '2': {                   //run away
-                game_stage = MAP_VIEW;
-                //enemy = nullptr;                              //TODO do I need this?
-                delete fight;
+                fight->setFight_status(RUN_AWAY);
                 break;
             }
             case '1': {
@@ -148,20 +145,19 @@ void Game::action(const char &button_) {
         }
         if (fight->retFight_status() == FIGHT_LOST) {
             game_stage = END_SCREEN;
-            delete enemy;
             objects.erase(std::remove(objects.begin(), objects.end(), enemy), objects.end());
             enemies.erase(std::remove(enemies.begin(), enemies.end(), enemy), enemies.end());
-            delete fight;
-        }
-        if (fight->retFight_status() == FIGHT_WON){
-            delete enemy;
+            fight.reset();
+        }else if (fight->retFight_status() == FIGHT_WON){
             objects.erase(std::remove(objects.begin(), objects.end(), enemy), objects.end());
             enemies.erase(std::remove(enemies.begin(), enemies.end(), enemy), enemies.end());
-            delete fight;
             game_stage = MAP_VIEW;
+            fight.reset();
+        }else if (fight->retFight_status() == RUN_AWAY){
+            game_stage = MAP_VIEW;
+            fight.reset();
         }
     }
-
     if (game_stage == END_SCREEN) {
         switch (button) {
             case '0' :
@@ -172,7 +168,7 @@ void Game::action(const char &button_) {
     }
 }
 
-Object *Game::retObjPointer(std::vector<Object *> &objects_, const int &x_, const int &y_) {
+std::shared_ptr<Object> Game::retObjPointer(std::vector<std::shared_ptr<Object>> &objects_, const int &x_, const int &y_) {
     for (auto i : objects_) {
         if (i->retPosx() == x_ && i->retPosy() == y_) {
             return i;

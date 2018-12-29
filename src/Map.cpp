@@ -1,6 +1,6 @@
 #include "Map.h"
 
-Map::Map(std::vector<Object*> &objects_) {
+Map::Map(std::vector<std::shared_ptr<Object>> &objects_) {
     std::cout << "MAP CONSTRUCTOR CALLED" << std::endl;
     std::string line;
     std::ifstream myfile ("../game_files/map_template.txt"); // TODO move this to game_files folder
@@ -23,7 +23,7 @@ Map::Map(std::vector<Object*> &objects_) {
     Map::fillMap(objects_);
 }
 
-void Map::fillMap(std::vector<Object*> &objects_) {
+void Map::fillMap(std::vector<std::shared_ptr<Object>> &objects_) {
     for(int j = 0; j < Map_size; j++) {
         {
             for(int i = 0; i < Map_size; i++) {
@@ -37,7 +37,7 @@ void Map::fillMap(std::vector<Object*> &objects_) {
     }
 }
 
-void Map::updateMap(std::vector<Object*> &objects_) {
+void Map::updateMap(std::vector<std::shared_ptr<Object>> &objects_) {
     Map::fillMap(objects_);
 }
 

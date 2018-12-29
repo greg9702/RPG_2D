@@ -22,8 +22,8 @@ class Game_Window {                             // TODO clean this class
 public:
     Game_Window();
     ~Game_Window();
-    void drawWindow(Map* map_, Player* player_);
-    void drawWindow(Player* player_, Enemy* enemy_);
+    void drawWindow(std::unique_ptr<Map> &map_, std::shared_ptr<Player> player_);
+    void drawWindow(std::shared_ptr<Player> player_, std::shared_ptr<Enemy> enemy_);
     void drawWindow();
     sf::RenderWindow Windowx;
     sf::Texture gTexture;

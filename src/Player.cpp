@@ -52,7 +52,7 @@ std::string stats = "HEALTH      " + std::to_string(this->hp) +
 
 
 int Player::retType() const {
-    return PLAYER;
+    return this->type;
 }
 
 void Player::takeDamage(const int& attack_) {

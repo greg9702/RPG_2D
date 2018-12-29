@@ -24,7 +24,7 @@ Game_Window::~Game_Window() {
     std::cout << "WINDOW DESTRUCTOR CALLED!" << std::endl;
 }
 
-void Game_Window::drawWindow(Map* map_, Player* player_) {                      // MAP VIEW WINDOW
+void Game_Window::drawWindow(std::unique_ptr<Map> &map_, std::shared_ptr<Player> player_) {                      // MAP VIEW WINDOW
     Windowx.clear();
 
     treeImage.setTexture(tTexture);
@@ -67,7 +67,7 @@ void Game_Window::drawWindow(Map* map_, Player* player_) {                      
     Windowx.display();
 }
 
-void Game_Window::drawWindow(Player *player_, Enemy *enemy_) {                  //FIGHT WINDOW
+void Game_Window::drawWindow(std::shared_ptr<Player> player_, std::shared_ptr<Enemy> enemy_) {                  //FIGHT WINDOW
     Windowx.clear();
 
     sf::Font font;

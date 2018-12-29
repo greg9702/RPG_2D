@@ -27,7 +27,7 @@ private:
     char button;
 
 
-    Game_stage game_stage;
+    int game_stage;
 public:
     Game();
     ~Game();
@@ -36,14 +36,14 @@ public:
     char input();                   // gets input
     void update(char& button);                  // update objects
     void action(const char& button_);
-    Game_Window * game_window;
-    Player* player;                 // TODO change to smart pointers
-    Map* map;
-    std::vector<Enemy*> enemies;
-    Enemy* enemy;
-    Fight* fight;
-    std::vector<Object*> objects;   // interface for all objects on map
-    Object* retObjPointer(std::vector<Object*> &objects, const int& x_, const int& y_); // using static cast we can cast it to any type
+    std::unique_ptr <Game_Window> game_window;
+    std::shared_ptr<Player> player;
+    std::unique_ptr<Map> map;                   // TODO change to unique
+    std::vector<std::shared_ptr<Enemy>> enemies;
+    std::shared_ptr<Enemy> enemy;               //enemy to fight
+    std::unique_ptr<Fight> fight;
+    std::vector<std::shared_ptr<Object>> objects;   // interface for all objects on map
+    std::shared_ptr<Object> retObjPointer(std::vector<std::shared_ptr<Object>> &objects, const int& x_, const int& y_); // using static cast we can cast it to any type
     std::string getCurrentTimestamp();
 };
 #endif
