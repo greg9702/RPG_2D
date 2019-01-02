@@ -17,7 +17,6 @@ Map::Map(std::vector<std::shared_ptr<Object>> &objects_) {
         myfile.close();
 
     } else {
-        std::cout << "Can't read map file" << std::endl;   // TODO move this to main file
         throw -2;
     }
     Map::fillMap(objects_);

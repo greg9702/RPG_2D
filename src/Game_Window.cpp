@@ -8,16 +8,15 @@ Game_Window::Game_Window() {
     Windowx.setFramerateLimit(60);                  // set FPS
 
     if(!gTexture.loadFromFile("../game_files/grass.png"))
-        std::cout << "Cant load g image " << std::endl;
+        throw -1;
     if(!pTexture.loadFromFile("../game_files/player.png"))
-        std::cout << "Cant load image " << std::endl;
+        throw -1;
     if(!tTexture.loadFromFile("../game_files/tree.png"))
-        std::cout << "Cant load t image " << std::endl;
+        throw -1;
     if(!eTexture.loadFromFile("../game_files/enemy.png"))
-        std::cout << "Cant load e image " << std::endl;
-
+        throw -1;
     if (!font.loadFromFile("../game_files/Sansation_Regular.ttf"))
-        std::cout << "Error loading font\n" ;
+        throw -1;
 }
 
 Game_Window::~Game_Window() {
@@ -104,7 +103,6 @@ void Game_Window::drawWindow() {                                             // 
     stext = "YOU ARE DEAD! \nGAME OVER";
     text.setString(stext);
     text.setCharacterSize(48); // in pixels, not points!
-    //text.setStyle(sf::Text::Bold );
     text.setPosition(0,0);
 
     Windowx.draw(text);

@@ -35,6 +35,6 @@ void Fight::Fight_update() {
     }
 }
 
-void Fight::setFight_status(int status) {
-    this->fight_control = status;
+void Fight::setStatRunAway() {
+    this->fight_control = RUN_AWAY;
 }

@@ -65,13 +65,13 @@ char Game::input() {
                 if (Event.key.code == sf::Keyboard::Num2 ) {
                     return '2';
                 }
-                if (Event.key.code == sf::Keyboard::Num2 ) {
+                if (Event.key.code == sf::Keyboard::Num3 ) {
                     return '3';
                 }
-                if (Event.key.code == sf::Keyboard::Num2 ) {
+                if (Event.key.code == sf::Keyboard::Num4 ) {
                     return '4';
                 }
-                if (Event.key.code == sf::Keyboard::Num2 ) {
+                if (Event.key.code == sf::Keyboard::Num5 ) {
                     return '5';
                 }
             }
@@ -133,7 +133,7 @@ void Game::action(const char &button_) {
     if (game_stage == FIGHT_VIEW) {
         switch (button) {
             case '2': {                   //run away
-                fight->setFight_status(RUN_AWAY);
+                fight->setStatRunAway();
                 break;
             }
             case '1': {

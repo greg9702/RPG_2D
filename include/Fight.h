@@ -26,8 +26,7 @@ public:
     int retFight_status();
     void action_attack();
     void Fight_update();
-
-    void setFight_status(int status);
+    void setStatRunAway();
 };
 
 #endif //RPG_FIGHT_H
