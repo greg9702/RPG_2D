@@ -25,8 +25,6 @@ class Game {
 private:
     bool game_over;
     char button;
-
-
     int game_stage;
 public:
     Game();

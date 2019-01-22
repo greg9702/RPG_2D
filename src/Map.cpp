@@ -3,7 +3,7 @@
 Map::Map(std::vector<std::shared_ptr<Object>> &objects_) {
     std::cout << "MAP CONSTRUCTOR CALLED" << std::endl;
     std::string line;
-    std::ifstream myfile ("../game_files/map_template.txt"); // TODO move this to game_files folder
+    std::ifstream myfile ("../game_files/map_template.txt"); 
     int j = 0;
     if (myfile.is_open())
     {
@@ -31,8 +31,8 @@ void Map::fillMap(std::vector<std::shared_ptr<Object>> &objects_) {
         }
     }
     for (auto& i : objects_) {
-        if (i->retType() == PLAYER) map [i->retPosy()][i->retPosx()] = 'p'; // draw player
-        if (i->retType() == ENEMY) map [i->retPosy()][i->retPosx()] = 'e'; // draw enemies
+        if (i->retType() == PLAYER) map [i->retPosy()][i->retPosx()] = 'p'; // add player
+        if (i->retType() == ENEMY) map [i->retPosy()][i->retPosx()] = 'e'; // add enemies
     }
 }
 

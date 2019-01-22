@@ -29,11 +29,11 @@ public:
     sf::Texture gTexture;
     sf::Sprite grassImage; // grass object image
     sf::Texture tTexture;
-    sf::Sprite treeImage;
+    sf::Sprite treeImage; // tree object image
     sf::Texture pTexture;
-    sf::Sprite playerImage;
+    sf::Sprite playerImage; // player object image
     sf::Texture eTexture;
-    sf::Sprite enemyImage;
+    sf::Sprite enemyImage;  // enemy object image
     sf::Font font;
 };
 

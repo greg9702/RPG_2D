@@ -10,8 +10,6 @@
 
 #define Map_size 20
 
-
-
 class Map {
 private:
     const static int length{Map_size};

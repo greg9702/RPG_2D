@@ -20,7 +20,7 @@ public:
     Object(const int& x_, const int& y_, const int& typ_);
     virtual ~Object() = 0;
     virtual int retPosx() const = 0;
-    virtual int retPosy() const = 0; // show position
+    virtual int retPosy() const = 0; // return position
     virtual int retType() const = 0;
 };
 

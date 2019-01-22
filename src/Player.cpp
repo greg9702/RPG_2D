@@ -92,7 +92,7 @@ int Player::retAtk() const {
 //        std::cin >> raw_in;
 //        a = raw_in.at(0);
 //        if (a == 'l') {
-//            int  b;                                     // TODO fix this shit
+//            int  b;
 //            do {
 //                std::cout << "Enter item number: ";
 //                std::cin >> b;
@@ -107,7 +107,7 @@ int Player::retAtk() const {
 //            }while(b <= 0 || b > Equipment.size());
 //        }
 //        if (a == 'u') {
-//            int  b;                                     // TODO fix this shit
+//            int  b;
 //            do {
 //                std::cout << "Enter item number: ";
 //                std::cin >> b;
@@ -125,7 +125,7 @@ int Player::retAtk() const {
 //            }while(b <= 0 || b > Equipment.size());
 //        }
 //        if (a == 'd') {
-//            int  b;                                     // TODO fix this shit
+//            int  b;
 //            do {
 //                std::cout << "Enter item number: ";
 //                std::cin >> b;

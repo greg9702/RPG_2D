@@ -8,6 +8,8 @@ Game::Game()
     objects.push_back(player);
     enemies.push_back(std::make_shared<Enemy>(5,5, ENEMY, 1, 55, 15, 5, 40, 10));
     enemies.push_back(std::make_shared<Enemy>(3,3, ENEMY,1, 54, 10, 5, 5, 10));
+    enemies.push_back(std::make_shared<Enemy>(15,3,ENEMY,1, 82, 32, 5, 5, 10));
+    enemies.push_back(std::make_shared<Enemy>(16,7,ENEMY,1, 82, 32, 5, 5, 10));
     enemies.push_back(std::make_shared<Enemy>(10,3,ENEMY,1, 82, 32, 5, 5, 10));
     for (auto i : enemies) {
         objects.push_back(i);
@@ -23,7 +25,7 @@ Game::~Game() {
 }
 
 void Game::start() {
-
+loot’u
     while (!game_over) {
         Game::draw();
         button = Game::input();

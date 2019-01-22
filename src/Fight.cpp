@@ -31,7 +31,7 @@ void Fight::Fight_update() {
     }
     if (enemy_->retHp() <= 0) {
         player_->getLoot(enemy_->dropLoot());
-        fight_control = FIGHT_WON;
+        this->fight_control = FIGHT_WON;
     }
 }
 
