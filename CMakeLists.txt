@@ -2,40 +2,11 @@ cmake_minimum_required(VERSION 3.10)
 project(RPG)
 
 set(CMAKE_CXX_STANDARD 17)
-#this probably isn't necessary
-set(SFML_INCLUDE_DIR "~/greg9702/Downloads/SFML-2.5.1/include")
-set(SFML_LIBRARY_DIR "~/greg9702/Downloads/SFML-2.5.1/lib")
-link_directories("~/greg9702/Downloads/SFML-2.5.1/lib")
-include_directories("~/greg9702/Downloads/SFML-2.5.1/include")
-set(SFML_DIR "~/greg9702/Downloads/SFML-2.5.1/lib/cmake/SFML")
 
-find_package (OpenGL)
-if(SFML_FOUND)
-    message(STATUS "SFML_INCLUDE_DIRS: ${SFML_INCLUDE_DIR}")
-    message(STATUS "SFML_LIBRARIES: ${SFML_LIBRARIES}")
-    message(STATUS "SFML_VERSION: ${SFML_VERSION}")
+include_directories("include" "SFML-2.5.1/include")
+link_directories("SFML-2.5.1/lib")
 
-    include_directories(${SFML_INCLUDE_DIRS})
-
-endif()
-
-#SET(GCC_COMPILE_FLAGS "-lpthread -lncurses")
-#add_definitions(${GCC_COMPILE_FLAGS})
-
-#find_package(Curses REQUIRED)
-#include_directories(${CURSES_INCLUDE_DIR})
-#target_link_libraries(snake ${CURSES_LIBRARIES})
-
-#SET(GCC_COMPILE_FLAGS "-g -lsfml-window -lsfml-system -lGLU -lGL")
-
-#SET (CMAKE_CXX_FLAGS_INIT "-fsanitize=leak -fno-omit-frame-pointer -g -lsfml-windowdsfs -lsfml-system -lGLU -lGL")
-include_directories(include)
-file(GLOB SOURCES "src/*.cpp" "include/*.h")
+file(GLOB SOURCES "src/*.cpp")
 add_executable(game ${SOURCES} )
-SET(GCC_COMPILE_FLAGS "-g -lsfml-window -lsfml-system -lGLU -lGL")
-target_link_libraries (game sfml-graphics sfml-window sfml-system -fsanitize=leak -fno-omit-frame-pointer -g -lsfml-system -lGLU -lGL)
-#export CC=/usr/bin/clang
-#export CXX=/usr/bin/clang++
-# i chyba to export ASAN_OPTIONS=detect_leaks=1
 
-#fsanitize=leak -fno-omit-frame-pointer
+target_link_libraries (game sfml-graphics sfml-window sfml-system )

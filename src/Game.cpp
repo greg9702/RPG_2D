@@ -25,7 +25,6 @@ Game::~Game() {
 }
 
 void Game::start() {
-loot’u
     while (!game_over) {
         Game::draw();
         button = Game::input();

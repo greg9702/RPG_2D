@@ -5,7 +5,7 @@ Game made using SFML. <br>
 ### Requirements
 - CMake
 - g++
-- SFML
+- [SFML](https://www.sfml-dev.org/download/sfml/2.5.1/)
 
 
 > A lot of things left to do here. <br>
